@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhaouas <mhaouas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 15:47:25 by mhaouas           #+#    #+#             */
-/*   Updated: 2024/03/05 15:48:23 by mhaouas          ###   ########.fr       */
+/*   Created: 2024/03/05 14:57:07 by mhaouas           #+#    #+#             */
+/*   Updated: 2024/03/05 15:17:55 by mhaouas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "INCLUDES/minishell.h"
+#include "libft.h"
 
-int	main()
+size_t	ft_array_len(void **array)
 {
-	printf("%s\n",getenv("PATH"));
+	size_t	i;
+	
+	i = 0;
+	if (!array || !*array)
+		return (0);
+	while (array[i])
+		i++;
+	return (i);
 }

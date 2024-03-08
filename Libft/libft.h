@@ -6,7 +6,7 @@
 /*   By: mhaouas <mhaouas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 12:50:38 by mhaouas           #+#    #+#             */
-/*   Updated: 2024/02/09 19:06:15 by mhaouas          ###   ########.fr       */
+/*   Updated: 2024/03/08 10:31:04 by mhaouas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 # include "GNL/get_next_line.h"
 # include "ft_printf.h"
+# include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
-# include <stdio.h>
 # include <unistd.h>
 
 /*=================== MANDATORY PART ===================*/
@@ -42,6 +42,7 @@ void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				*ft_strnstr(const char *big, const char *little,
 						size_t len);
+char				*ft_strstr(const char *big, const char *little);
 int					ft_atoi(const char *str);
 void				*ft_calloc(size_t nmemb, size_t size);
 char				*ft_strdup(const char *s);
@@ -57,10 +58,11 @@ void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int nb, int fd);
 char				**ft_split(char const *s, char sep);
 int					ft_count_word(char const *s, char sep);
-void				ft_free_2d_array(char **array);
+void				ft_free_2d_array(void **array);
 int					ft_atoi_base(char *base, char *to_convert);
 int					ft_abs(int to_check);
-
+size_t				ft_array_len(void **array);
+char				*ft_unsplit(char **tab_to_unsplit, char sep);
 /*=================== BONUS PART ===================*/
 /*=========BONUS STRUCT=========*/
 typedef struct s_list

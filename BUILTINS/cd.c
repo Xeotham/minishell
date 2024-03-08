@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   cd.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhaouas <mhaouas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 15:47:25 by mhaouas           #+#    #+#             */
-/*   Updated: 2024/03/05 15:48:23 by mhaouas          ###   ########.fr       */
+/*   Created: 2024/03/04 14:05:22 by mhaouas           #+#    #+#             */
+/*   Updated: 2024/03/07 10:33:22 by mhaouas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "INCLUDES/minishell.h"
+#include "../INCLUDES/minishell.h"
 
-int	main()
+int	ft_cd(int ac, char **av, char **env)
 {
-	printf("%s\n",getenv("PATH"));
+	
 }

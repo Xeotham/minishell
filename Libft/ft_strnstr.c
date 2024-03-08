@@ -6,7 +6,7 @@
 /*   By: mhaouas <mhaouas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 21:13:30 by mhaouas           #+#    #+#             */
-/*   Updated: 2023/11/06 18:02:18 by mhaouas          ###   ########.fr       */
+/*   Updated: 2024/03/08 10:31:28 by mhaouas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,32 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			save = i;
 		while ((little[c] == big[i + c]) && (little[c]) && (big[i]) && ((i
 					+ c) < len))
+			c++;
+		if (tfl == c)
+			return ((char *)big + save);
+		c = 0;
+		i++;
+	}
+	return (NULL);
+}
+
+char	*ft_strstr(const char *big, const char *little)
+{
+	size_t	i;
+	size_t	c;
+	size_t	tfl;
+	int		save;
+
+	i = 0;
+	c = 0;
+	tfl = ft_strlen(little);
+	if (tfl == 0)
+		return ((char *)big);
+	while (big[i])
+	{
+		if (big[i] == little[c])
+			save = i;
+		while ((little[c] == big[i + c]) && (little[c]) && (big[i]))
 			c++;
 		if (tfl == c)
 			return ((char *)big + save);
